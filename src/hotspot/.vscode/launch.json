@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [        
+        {
+            "name": "HotSpot Linux Debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/home/liujf/openjdk12/jdk/build/linux-x86_64-server-slowdebug/jdk/bin/java",
+            "args": ["Hello"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [
+                {"name":"JAVA_HOME","value":"/home/liujf/openjdk12/jdk/build/linux-x86_64-server-slowdebug/jdk/"},
+                {"name":"CLASSPATH","value":".:/home/liujf/openjdk12/jdk/src/hotspot"}
+            ],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}
